@@ -1,4 +1,4 @@
-#if defined(WIFI_LoRa_32_V3) || defined(Wireless_Mini_Shell)
+#if defined(WIFI_LoRa_32_V3)||defined(Wireless_Track)||defined(Wireless_Mini_Shell)||defined(WIFI_LoRa_32_SX1262)||defined(Wireless_Stick_V3)
 #include <string.h>
 #include "../loramac/utilities.h"
 #include "../driver/timer.h"
@@ -138,7 +138,7 @@ void SX126xSetNodeAddress(uint8_t nodeAddress)
 
 void SX126xSetBroadcastAddress(uint8_t broadcastAddress)
 {
-    SX126xWriteRegister(REG_LR_BROADCASTRADDRESS, SX126xSetNodeAddress);
+    SX126xWriteRegister(REG_LR_BROADCASTRADDRESS, broadcastAddress);
 }
 
 uint8_t SX126xSetSyncWord( uint8_t *syncWord )

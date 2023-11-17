@@ -1,6 +1,8 @@
 #ifndef IMAGES_H
 #define IMAGES_H
 
+#include <Arduino.h>
+
 #define logo_width 128
 #define logo_height 53
 const static char logo_bits[] = {
